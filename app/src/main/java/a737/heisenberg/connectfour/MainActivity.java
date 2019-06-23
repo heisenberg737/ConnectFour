@@ -156,14 +156,14 @@ public class MainActivity extends AppCompatActivity {
         protected void onDraw(Canvas canvas) {
             if (p % 2== 0 && count[c]>=0) {
                 canvas.drawCircle((sx) + c * (w) / 7, (sy) + (count[c]) * (h) / 8, 50, red);
-                res[c][count[c]]=1;
+                res[c][count[c]]=1; //updated res here
                 Log.d("C4","rec[c][count[c]]="+res[c][count[c]]+"");
                 count[c] = count[c] - 1;
                 p++;
 
             } else if (p %2 == 1 && count[c]>=0) {
                 canvas.drawCircle((sx) + c * (w) / 7, (sy) + (count[c]) * (h) / 8, 50, blue);
-                res[c][count[c]]=2;
+                res[c][count[c]]=2;  //updated res here
                 Log.d("C4","rec[c][count[c]]="+res[c][count[c]]+"");
 //                d[c]++;
                 count[c] = count[c] - 1;
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
         public void check() {
             a = c;
             b = count[c];
-            Log.d("Check", " res[a][b]=" + res[a][b]);
+            Log.d("Check", " res[a][b]=" + res[a][b]); //Although res is updated, but it's not reflected here. res[a][b] is 0 here.
 
                 if (b > 2 && res[a][b] == res[a][b - 1] && res[a][b] == res[a][b - 2] && res[a][b] == res[a][b - 3])
                     result();
