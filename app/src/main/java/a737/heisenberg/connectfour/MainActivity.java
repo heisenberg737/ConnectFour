@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         dots.check();
         if(p==41)
             tie();
-        Log.d("Drop Dot","res[c][count[c]]="+res[c][count[c]]+"");
     }
 
     public void tie()
@@ -130,10 +129,6 @@ public class MainActivity extends AppCompatActivity {
                 dropDot();
             }
             }
-//            if(p%2==0)
-//                res[c][count[c]]=1;
-//            else if(p%2==1)
-//                res[c][count[c]]=2;
             return true;
         }
 
